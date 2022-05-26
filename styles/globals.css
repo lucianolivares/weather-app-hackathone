@@ -14,3 +14,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.region {
+  font-weight: 400;
+}
+.forecast {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+.pre {
+  width: 100%;
+}
