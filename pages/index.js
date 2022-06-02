@@ -5,6 +5,7 @@ import HourlySection from "components/HourlySection"
 
 import styles from "styles/Home.module.css"
 import DailySection from "components/DailySection"
+import getForecast from "services/getForecast"
 
 export default function Home({ data }) {
   const { current, location, forecast } = data
@@ -22,31 +23,12 @@ export default function Home({ data }) {
         <HourlySection hours={forecastToday.hour} />
         <DailySection forecast={forecast} />
       </main>
-      <style jsx>
-        {`
-          h1 {
-            text-align: center;
-          }
-        `}
-      </style>
     </>
   )
 }
 
 export const getStaticProps = async () => {
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
-      "X-RapidAPI-Key": "1715fa436bmsh52f239e30da0e95p1e5c23jsn282838ce24bb",
-    },
-  }
-
-  const res = await fetch(
-    "https://weatherapi-com.p.rapidapi.com/forecast.json?q=La%20Serena&days=3&lang=es",
-    options
-  )
-  const data = await res.json()
+  const data = await getForecast("La Serena")
   return {
     props: {
       data,
