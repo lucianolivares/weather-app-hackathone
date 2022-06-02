@@ -1,5 +1,6 @@
 import styles from "./Banner.module.css"
-function Banner({ location, current }) {
+
+export default function Banner({ location, current }) {
   return (
     <section className={styles.section}>
       <header className={styles.header}>
@@ -21,5 +22,3 @@ function Banner({ location, current }) {
     </section>
   )
 }
-
-export default Banner
