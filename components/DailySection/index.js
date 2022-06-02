@@ -4,8 +4,8 @@ import styles from "./DailySection.module.css"
 
 const DailySection = ({ forecast }) => {
   return (
-    <div className={styles.container}>
-      <h3>Pronostico diario</h3>
+    <section className={styles.container}>
+      <h3 className={styles.title}>Pronostico diario</h3>
       <div>
         {forecast.forecastday.map((day) => {
           return (
@@ -18,7 +18,7 @@ const DailySection = ({ forecast }) => {
           )
         })}
       </div>
-    </div>
+    </section>
   )
 }
 
