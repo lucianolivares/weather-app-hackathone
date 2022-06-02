@@ -27,7 +27,7 @@ export default function Home({ data }) {
   )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const data = await getForecast("La Serena")
   return {
     props: {
