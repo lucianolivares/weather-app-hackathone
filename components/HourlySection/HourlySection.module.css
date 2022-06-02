@@ -1,9 +1,17 @@
+.container {
+  margin: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--primary);
+  border-radius: 1rem;
+  max-height: 250px;
+}
+
 .div {
   display: flex;
   flex-wrap: nowrap;
   gap: 0.5rem;
   overflow-x: auto;
-  padding-inline: 0.5rem;
+  padding-right: 0.5rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -23,10 +31,8 @@
   width: 250px;
 }
 
-.h1 {
-  font-size: 1.2rem;
+.title {
   color: var(--secondary);
-  padding-left: 1rem;
 }
 
 .label {

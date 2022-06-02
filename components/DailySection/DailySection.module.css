@@ -1,7 +1,11 @@
 .container {
   margin: 0.5rem;
   padding: 1rem;
-  border: 2px solid var(--primary);
+  border: 1px solid var(--primary);
   border-radius: 1rem;
   max-height: 250px;
+}
+
+.title {
+  color: var(--secondary);
 }

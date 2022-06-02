@@ -1,7 +1,7 @@
 .section {
   margin: 0.5rem;
   padding: 1rem;
-  border: 2px solid var(--primary);
+  border: 1px solid var(--primary);
   border-radius: 1rem;
   max-height: 250px;
 }
@@ -12,7 +12,8 @@
 }
 .h1 {
   font-size: 1.5rem;
-  color: #444444;
+  color: var(--secondary);
+
   line-height: 2.5rem;
   padding-bottom: 0.2rem;
   margin: 0;
