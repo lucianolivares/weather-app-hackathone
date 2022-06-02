@@ -5,6 +5,11 @@
   overflow-x: auto;
   padding-inline: 0.5rem;
   scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.div::-webkit-scrollbar {
+  display: none;
 }
 
 .card {

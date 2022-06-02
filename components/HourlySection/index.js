@@ -1,7 +1,7 @@
 import styles from "./HourlySection.module.css"
 
-function HourlySection({ hour }) {
-  const elements = hour.map((hourly) => {
+function HourlySection({ hours }) {
+  const elements = hours.map((hourly) => {
     const show = new Date(hourly.time) >= new Date(Date.now())
     const hora = new Date(hourly.time).toLocaleTimeString("default", {
       hour: "2-digit",
