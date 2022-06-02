@@ -1,0 +1,7 @@
+.container {
+  margin: 0.5rem;
+  padding: 1rem;
+  border: 2px solid var(--primary);
+  border-radius: 1rem;
+  max-height: 250px;
+}
