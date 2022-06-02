@@ -1,7 +1,10 @@
 import Head from "next/head"
-import HourlySection from "../components/HourlySection"
-import Banner from "../components/Banner"
-import styles from "../styles/Home.module.css"
+
+import Banner from "components/Banner"
+import HourlySection from "components/HourlySection"
+
+import styles from "styles/Home.module.css"
+import DailySection from "components/DailySection"
 
 export default function Home({ data }) {
   const { current, location, forecast } = data
@@ -16,23 +19,8 @@ export default function Home({ data }) {
 
       <main className={styles.main}>
         <Banner location={location} current={current} />
-        <HourlySection {...forecastToday} />
-
-        <p>
-          Fecha <strong>Min </strong> <strong>Max</strong>
-        </p>
-        <div>
-          {forecast.forecastday.map((day) => {
-            return (
-              <div key={day.date} className={styles.card}>
-                <p>
-                  {day.date}: <strong>{day.day.mintemp_c}° </strong>
-                  <strong> {day.day.maxtemp_c}°</strong>
-                </p>
-              </div>
-            )
-          })}
-        </div>
+        <HourlySection hours={forecastToday.hour} />
+        <DailySection forecast={forecast} />
       </main>
       <style jsx>
         {`
