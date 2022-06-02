@@ -1,6 +1,8 @@
 import styles from "./HourlySection.module.css"
 
 function HourlySection({ hours }) {
+  // Pendiente agregar horas del próximo día cuando sean menos
+  // de 5 horas restantes del día actual
   const elements = hours.map((hourly) => {
     const show = new Date(hourly.time) >= new Date(Date.now())
     const hora = new Date(hourly.time).toLocaleTimeString("default", {
@@ -22,7 +24,7 @@ function HourlySection({ hours }) {
   })
   return (
     <section>
-      <h1 className={styles.h1}>Hoy</h1>
+      <h1 className={styles.h1}>Próximas Horas</h1>
       <div className={styles.div}>{elements}</div>
     </section>
   )
